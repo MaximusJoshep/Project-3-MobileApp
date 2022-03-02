@@ -35,9 +35,14 @@ public class YankiController {
        
     }
   @DeleteMapping("/{key}")
-    public Mono<Boolean> delete(String key) {
+    public Mono<Boolean> delete(@PathVariable("key") String key) {   
         return service.delete(key);
     }
+    @PostMapping("send")
+    public void send(@RequestBody Yanki yanki){
+        service.sendPayments(yanki);
+    }
+
 
   
 

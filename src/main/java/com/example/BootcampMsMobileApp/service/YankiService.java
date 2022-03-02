@@ -10,7 +10,7 @@ public interface YankiService {
     public Mono<Boolean> save(String key, Yanki yanki);
     public Mono<Yanki> findByKey(String key);
     public Mono<Boolean> delete(String key);
-    public boolean sendPayments(Yanki yanki);
+    public void sendPayments(Yanki yanki);
     public void recibePayments();
 
 }

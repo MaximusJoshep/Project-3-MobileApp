@@ -21,10 +21,10 @@ public class YankiServiceImpl implements YankiService {
  
     @Override
     @SendTo
-    public boolean sendPayments(Yanki yanki) {
+    public void sendPayments(Yanki yanki) {
        
         this.kafkaTemplate.send("xc73qeeh-default", yanki);
-        return true;
+
         //return source.send("data", MessageBuilder.withPayload(yanki).build());
 
         
